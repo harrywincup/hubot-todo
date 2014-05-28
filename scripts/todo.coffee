@@ -2,17 +2,17 @@
 #   Simple todo app to help keep the mind clear
 #
 # Dependencies:
-#   "underscore": "1.6.x"
 #
 # Configuration:
 #   None
 #
 # Commands:
+#   /todo[s] add <description> - Add a new todo with a basic description
+#   /todos finish[ed] <item number | all> - Remove a todo item from the list
+#   /todos list - List your tasks
 #
 # Author:
 #   Harry Wincup <harry@harrywincup.co.uk>
-
-_ 	 = require('underscore')
 
 class Todos
 	constructor: (@robot) ->
