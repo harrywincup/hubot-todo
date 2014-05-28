@@ -1,0 +1,28 @@
+{
+  "name": "hubot-todos",
+  "version": "0.0.1",
+  "description": "Hubot todo app to help keep the mind clear",
+  "main": "index.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/harrywincup/hubot-todo.git"
+  },
+  "dependencies": {
+	"underscore": "1.6.x"
+  },
+  "keywords": [
+    "hubot",
+    "todo",
+    "todos",
+    "list"
+  ],
+  "author": "Harry Wincup",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harrywincup/hubot-todo/issues"
+  },
+  "homepage": "https://github.com/harrywincup/hubot-todo"
+}
