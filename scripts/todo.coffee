@@ -7,9 +7,10 @@
 #   None
 #
 # Commands:
-#   /todo[s] add <description> - Add a new todo with a basic description
+#   /todos add <description> - Add a new todo with a basic description
 #   /todos finish[ed] <item number | all> - Remove a todo item from the list
 #   /todos list - List your tasks
+#   /todos help - Get help with this plugin
 #
 # Author:
 #   Harry Wincup <harry@harrywincup.co.uk>
@@ -18,9 +19,16 @@ class Todos
 	constructor: (@robot) ->
 		@robot.brain.data.todos = {}
 
-		@robot.hear /^\/todo(?:s)? add (.*)$/i, @addItem
+		@robot.hear /^\/todos add (.*)$/i, @addItem
 		@robot.hear /^\/todos finish(?:ed)? ([0-9+]|all)/i, @removeItem
 		@robot.hear /^\/todos list$/i, @listItems
+		@robot.hear /^\/todos help$/i, @help
+
+	help: (msg) =>
+		commands = @robot.helpCommands()
+		commands = (command for command in commands when command.match(/\/todos/))
+
+		msg.send commands.join("\n")
 
 	addItem: (msg) =>
 		user 	   = msg.message.user
