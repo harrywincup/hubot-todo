@@ -19,10 +19,10 @@ class Todos
 	constructor: (@robot) ->
 		@robot.brain.data.todos = {}
 
-		@robot.respond /^\/todos add (.*)$/i, @addItem
-		@robot.respond /^\/todos finish(?:ed)? ([0-9+]|all)/i, @removeItem
-		@robot.respond /^\/todos list$/i, @listItems
-		@robot.respond /^\/todos help$/i, @help
+		@robot.respond /\/todos add (.*)/i, @addItem
+		@robot.respond /\/todos finish(?:ed)? ([0-9+]|all)/i, @removeItem
+		@robot.respond /\/todos list/i, @listItems
+		@robot.respond /\/todos help/i, @help
 
 	help: (msg) =>
 		commands = @robot.helpCommands()
