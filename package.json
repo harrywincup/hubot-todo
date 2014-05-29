@@ -1,6 +1,6 @@
 {
   "name": "hubot-todos",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Hubot todo app to help keep the mind clear",
   "main": "index.coffee",
   "scripts": {
